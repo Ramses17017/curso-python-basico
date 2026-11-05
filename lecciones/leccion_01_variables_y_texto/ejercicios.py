@@ -21,7 +21,7 @@ def nombre_completo(nombre, apellido):
         'Ana López'
     """
     # Borra la línea de abajo y escribe tu código en su lugar.
-    raise NotImplementedError("Aún no completas la función nombre_completo().")
+    return f"{nombre} {apellido}".title()
 
 
 def limpiar_texto(texto):
@@ -32,7 +32,7 @@ def limpiar_texto(texto):
         'monterrey'
     """
     # Borra la línea de abajo y escribe tu código en su lugar.
-    raise NotImplementedError("Aún no completas la función limpiar_texto().")
+    return texto.strip().lower()
 
 
 def precio_a_numero(texto):
@@ -45,7 +45,8 @@ def precio_a_numero(texto):
         1250.5
     """
     # Borra la línea de abajo y escribe tu código en su lugar.
-    raise NotImplementedError("Aún no completas la función precio_a_numero().")
+    precio = float(texto.replace("$", "").replace(",", ""))
+    return precio
 
 
 def calcular_total(cantidad, precio_unitario):
@@ -56,7 +57,8 @@ def calcular_total(cantidad, precio_unitario):
         59.97
     """
     # Borra la línea de abajo y escribe tu código en su lugar.
-    raise NotImplementedError("Aún no completas la función calcular_total().")
+    total_m = round(cantidad * precio_unitario, 2)
+    return total_m
 
 
 def aplicar_descuento(total, porcentaje):
@@ -69,7 +71,10 @@ def aplicar_descuento(total, porcentaje):
         170.0
     """
     # Borra la línea de abajo y escribe tu código en su lugar.
-    raise NotImplementedError("Aún no completas la función aplicar_descuento().")
+    descuento = total * porcentaje
+    descuento_real = descuento / 100
+    precio_f = round(total - descuento_real, 2)
+    return  precio_f
 
 
 def formatear_importe(importe):
@@ -80,4 +85,4 @@ def formatear_importe(importe):
         '$1,250.50 MXN'
     """
     # Borra la línea de abajo y escribe tu código en su lugar.
-    raise NotImplementedError("Aún no completas la función formatear_importe().")
+    return f"${importe:,.2f} MXN"
